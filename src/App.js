@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MyButton from "./components/Button.tsx";
+import Game from "./components/Game.tsx";
+import Test from "./components/test.tsx";
+import Adder from "./components/Adder.tsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello, React!</h1>
+
+      <h1>欢迎来到我的应用</h1>
+      
+      <MyButton
+        disabled={false}
+        title="我是一个按钮"
+        onClick={() => alert("按钮被点击了")}
+      />
+      <br />
+      <div
+        style={{ border: "1px solid black", width: "300px", height: "400px" }}
+      >
+        <Game />
+        
+      </div>
+      <div
+        style={{ border: "1px solid black", width: "300px", height: "200px" }}
+      >
+       <Adder />
+      </div>
+      
+
     </div>
   );
 }
